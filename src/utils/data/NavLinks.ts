@@ -5,6 +5,6 @@ export interface INavLink {
 
 export const NavLinks:INavLink[] = [
     {label : 'Home', href : '/'},
-    {label : 'portfolio', href : '/portfolio'},
+    {label : 'Portfolio', href : '/portfolio'},
     {label : 'Experience', href : '/exp'}
 ]

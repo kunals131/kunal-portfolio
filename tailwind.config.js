@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors : {
+        primaryBg : '#151418',
+        secondaryBg : '#242329'
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/typography')

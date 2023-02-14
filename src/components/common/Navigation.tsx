@@ -12,10 +12,10 @@ const Navigation = () => {
         <AnimateSharedLayout>
             <nav className='flex'>
                 {NavLinks.map(link => (
-                    <Link className='flex last:mr-0 mr-10 flex-col w-fit' href={link.href}>
+                    <Link key={link.href} className='mr-6 sm:mr-8 flex flex-col relative' href={link.href}>
                         <>
                             <span>{link.label}</span>
-                            {isActiveLink(link.href, router.pathname) && <motion.div layoutId='navigation-active-underline' className='w-full h-[2px] bg-yellow-300'></motion.div>}
+                            {isActiveLink(link.href, router.pathname) && <motion.div layoutId='navigation-active-underline' className='w-full h-[1.7px] bg-yellow-300'></motion.div>}
                         </>
                     </Link>
                 ))}
