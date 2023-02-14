@@ -13,7 +13,7 @@ r    h-16 md:h-20 border-b border-gray-200 z-50
     text-black dark:text-white'>
       <PhoneNavigation />
       <Link href='/' className='relative px-2'>
-        <div className='w-[30px] h-[30px] max-md:hidden bg-yellow-500 z-[1] absolute rounded-lg rotate-45 right-0'></div>
+        <div className='w-[30px] h-[30px] max-md:hidden bg-gray-200 dark:bg-yellow-500 z-[1] absolute rounded-lg rotate-45 right-0'></div>
         <>
           <span className='block font-semibold max-md:hidden relative z-[2]'>Kunal Sangtiani</span>
           <span className='hidden max-md:block relative z-[2] font-semibold'>KS</span>
