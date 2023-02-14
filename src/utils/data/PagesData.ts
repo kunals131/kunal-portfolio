@@ -1,10 +1,12 @@
 export const PagesData = {
     HOME : {
         title : "Hey, I'm Kunal 👋",
-        subTitle : "I'm a software developer at Ostmodern, and living in Southampton, UK.",
+        subTitle : "I'm a skilled full stack developer, capable of developing high quality web apps.",
         about : [
-            "I spend most of my time as a frontend developer on Ostmodern's Skylark CMS using React.js. Sometimes I use Node.js, Docker, Kubernetes and Golang and I'm currently experimenting with Serverless technologies on AWS and Azure.",
-            "I spend most of my time as a frontend developer on Ostmodern's Skylark CMS using React.js. Sometimes I use Node.js, Docker, Kubernetes and Golang and I'm currently experimenting with Serverless technologies on AWS and Azure."
+            `I am an Information Technology undergraduate at the Institute of Engineering and Technology, 
+            DAVV (India) and a technology enthusiast. I spend most of my developing Full stack applications for freelance clients across the globe.`,
+            `I also participate in hackathons, and coding competitions, recently I won a national-level Smart India Hackathon. I enjoy solving programming 
+            problems and have solved over 450 problems on platforms like Codeforces (Specialist 1400+), Codechef & leetcode.`
         ],
     },
     PORTFOLIO : {
