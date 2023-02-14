@@ -13,7 +13,7 @@ const ExperienceItem = (props:IExperience) => {
           <p className='max-sm:shrink-0'>{props.duration}</p>
         </div>
         <ul className='mt-3 max-sm:text-sm max-sm:list-outside list-inside list-disc text-gray-600 dark:text-gray-300 font-light text-base space-y-1'>
-          {props.description.map(item=><li>{item}</li>)}
+          {props.description.map((item,idx)=><li key={idx}>{item}</li>)}
         </ul>
       </article>
     </div>
