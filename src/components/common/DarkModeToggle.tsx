@@ -21,8 +21,13 @@ const DarkModeToggle = () => {
     }
 
     useEffect(() => {
+        if (isDark()) {
+            document.documentElement.classList.add('dark')
+        }else {
+            document.documentElement.classList.remove('dark')
+        }
         setDarkMode(isDark())
-    }, [])
+    }, [typeof window])
 
     const darkModeActive: boolean =
         process.browser && document.documentElement.classList.contains('dark')
@@ -37,7 +42,7 @@ const DarkModeToggle = () => {
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ duration: 0.2 }}
             >
-                {darkModeActive ? '🌙' : '🌤️'}
+                {isDarkMode ? '🌙' : '🌤️'}
             </motion.button>
         </AnimatePresence>
     )
