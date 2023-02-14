@@ -22,6 +22,7 @@ const PortfolioPage = () => {
         <Layout title={PagesData.PORTFOLIO.title} description={PagesData.PORTFOLIO.subTitle}>
             <PageTitle title={PagesData.PORTFOLIO.title} subtitle={PagesData.PORTFOLIO.subTitle} />
             <Section linebreak>
+                <div className='overflow-hidden w-full'>
                 <PortfolioNavigation category={category} setCategory={setCategory} />
                 <AnimatePresence mode='wait' initial={false}>
                     <motion.div
@@ -62,6 +63,7 @@ const PortfolioPage = () => {
                             </div>}
                     </motion.div>
                 </AnimatePresence>
+                </div>
             </Section>
         </Layout>
     )
