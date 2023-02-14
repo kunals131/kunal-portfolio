@@ -15,5 +15,10 @@ export interface IPortfolio {
     portfolio : string,
     canonical:string,
     coverImage : string,
+    videoURL?: string,
+    liveURL?: string,
+    githubURL?:string,
+    category ?:string
+
 }
 

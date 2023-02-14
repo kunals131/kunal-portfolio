@@ -13,7 +13,7 @@ interface IProps {
     coverImage?: string
 }
 
-const ArticleCard = ({
+const PortfolioCard = ({
     title,
     description,
     date,
@@ -44,11 +44,11 @@ const ArticleCard = ({
 
         </Link>
         {coverImage && (
-            <div className="w-full h-auto sm:w-1/2 relative lg:w-1/2 xl:w-2/5 mt-4 sm:mt-0 sm:ml-4 flex items-center justify-center">
-                <Image src={coverImage} fill={true} className="w-full h-[100px] object-contain rounded-sm" alt="" />
+            <div className="w-full rounded-md h-auto sm:w-1/2 relative lg:w-1/2 xl:w-2/5 mt-4 sm:mt-0 sm:ml-4 flex items-center justify-center">
+                <Image src={coverImage} fill={true} className="w-full rounded-xl  object-contain " alt="" />
             </div>
         )}
     </div>
 )
 
-export default ArticleCard
+export default PortfolioCard

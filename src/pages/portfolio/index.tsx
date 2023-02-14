@@ -1,34 +1,71 @@
 
-import PageTitle from '@/components/common/PageTitle'
-import ArticleCard from '@/components/common/PortfolioCard'
-import Section from '@/components/common/Section'
+
+import { Section,PageTitle,PortfolioCard,PortfolioNavigation } from '@/components/common'
 import { Layout } from '@/components/layout'
+import { AnimatePresence, motion } from 'framer-motion'
+import { CATEGORIES, CategoryOptions, PagesData, PortfolioData } from '@/utils/data'
+import { useState } from 'react'
 
-import { PortfolioData } from '@/utils/data/PortfolioData'
 
 
-const title = 'Projects 📚'
-const subtitle = "A selection of projects I've worked on, during my career as a software developer."
 
-const PortfolioPage = () => (
-    <Layout title={title} description={subtitle}>
-        <PageTitle title={title} subtitle={subtitle} />
-        <Section linebreak>
-            {PortfolioData.map(({ title, description, publishedAt, tags,canonical, coverImage }) => (
-                <ArticleCard
-                    key={title}
-                    title={title}
-                    description={description}
-                    date={publishedAt}
-                    tags={tags}
-                    canonical={canonical}
-                    portfolio
-                    coverImage={coverImage}
-                />
-            ))}
-        </Section>
-    </Layout>
-)
+const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 100, y: 0 },
+}
+
+const PortfolioPage = () => {
+    const [category, setCategory] = useState(CategoryOptions[0].value)
+
+    return (
+        <Layout title={PagesData.PORTFOLIO.title} description={PagesData.PORTFOLIO.subTitle}>
+            <PageTitle title={PagesData.PORTFOLIO.title} subtitle={PagesData.PORTFOLIO.subTitle} />
+            <Section linebreak>
+                <PortfolioNavigation category={category} setCategory={setCategory} />
+                <AnimatePresence mode='wait' initial={false}>
+                    <motion.div
+                        initial="hidden"
+                        animate="enter"
+                        key={category}
+                        exit="exit"
+                        variants={variants}
+                        transition={{ type: 'linear' }}
+                    >
+                        {category === CATEGORIES.CLIENT ? <div>
+                            {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt, tags, canonical, coverImage }) => (
+                                <PortfolioCard
+                                    key={title}
+                                    title={title}
+                                    description={description}
+                                    date={publishedAt}
+                                    tags={tags}
+                                    canonical={canonical}
+                                    portfolio
+                                    coverImage={coverImage}
+                                />
+                            ))}
+                        </div> :
+                            <div>
+                                {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt, tags, canonical, coverImage }) => (
+                                    <PortfolioCard
+                                        key={title}
+                                        title={title}
+                                        description={description}
+                                        date={publishedAt}
+                                        tags={tags}
+                                        canonical={canonical}
+                                        portfolio
+                                        coverImage={coverImage}
+                                    />
+                                ))}
+                            </div>}
+                    </motion.div>
+                </AnimatePresence>
+            </Section>
+        </Layout>
+    )
+}
 
 // export const getStaticProps: GetStaticProps = async () => {
 //     const articles = await getAllPortfolioArticles()

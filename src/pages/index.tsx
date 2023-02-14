@@ -1,23 +1,20 @@
 
-
-import PageTitle from '@/components/common/PageTitle'
-import Section from '@/components/common/Section'
+import {Section,PageTitle} from '@/components/common'
 import ExperienceItem from '@/components/Home/ExperienceItem'
 import { Layout } from '@/components/layout'
-import { ExperienceData } from '@/utils/data'
+import { ExperienceData, PagesData } from '@/utils/data'
 import { NextPage } from 'next'
 
 import React from 'react'
 
 const Home: NextPage = () => {
   return (
-    <Layout title='Home' description='Test title'>
-      <PageTitle title="Hey, I'm Kunal 👋" subtitle="I'm a software developer at Ostmodern, and living in Southampton, UK." icons />
+    <Layout title='Home' description={PagesData.HOME.title}>
+      <PageTitle title="Hey, I'm Kunal 👋" subtitle={PagesData.HOME.subTitle} icons />
       <Section linebreak>
         <h1 className='font-light text-4xl'>About</h1>
         <div className='mt-4  font-light text-lg space-y-3'>
-          <p>{`I spend most of my time as a frontend developer on Ostmodern's Skylark CMS using React.js. Sometimes I use Node.js, Docker, Kubernetes and Golang and I'm currently experimenting with Serverless technologies on AWS and Azure.`}</p>
-          <p className=''>{`I spend most of my time as a frontend developer on Ostmodern's Skylark CMS using React.js. Sometimes I use Node.js, Docker, Kubernetes and Golang and I'm currently experimenting with Serverless technologies on AWS and Azure.`}</p>
+          {PagesData.HOME.about.map((item,key)=><p key={key}>{item}</p>)}
         </div>
       </Section>
       <Section>
