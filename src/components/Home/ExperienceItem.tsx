@@ -6,16 +6,16 @@ import React from 'react'
 const ExperienceItem = (props:IExperience) => {
   return (
     <div className='my-6'>
-        <div className='text-2xl max-sm:text-xl max-sm:flex-col text-gray-700 dark:text-gray-200 font-thin flex items-start justify-between w-full'>
-            <span >{props.title}</span>
-            <div className='text-sm pt-[6px] max-sm:pt-0 max-sm:text-xs max-sm:opacity-60'>{props.duration}</div>
+      <article className=' text-gray-600 dark:text-gray-300 '>
+        <h2 className='font-normal max-sm:text-xl text-2xl'>{props.title}</h2>
+        <div className='flex  text-base max-sm:text-sm max-sm:gap-1 opacity-70 items-center  gap-2'>
+          <p className='max-sm:truncate'>{props.company}</p>| 
+          <p className='max-sm:shrink-0'>{props.duration}</p>
         </div>
-        <div className='mt-0 dark:text-gray-400 text-lg max-sm:mt-2 font-[300]'>{props.company}</div>
-        <ul className='flex text-sm mt-3 max-sm:mt-1 items-start list-disc list-inside flex-col space-y-2'>
-            {props.description.map((text,idx)=>(
-                <li key={idx}>{text}</li>
-            ))}
+        <ul className='mt-3 max-sm:text-sm max-sm:list-outside list-inside list-disc text-gray-600 dark:text-gray-300 font-light text-base space-y-1'>
+          {props.description.map(item=><li>{item}</li>)}
         </ul>
+      </article>
     </div>
   )
 }
