@@ -6,7 +6,7 @@ const Footer = () => (
         <SocialIcons />
         <a
             className="text-sm mb-4 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors"
-            href="mailto:j@wallis.dev?Subject=Hello"
+            href="mailto:ksangtiani13@gmail.com?Subject=Hello"
         >
             ksangtiani13@gmail.com
         </a>
