@@ -18,6 +18,8 @@ export interface IPortfolio {
     videoURL?: string,
     liveURL?: string,
     githubURL?:string,
+    assetsURL ?:string
+    primaryURL ?:string
     category ?:string
 
 }

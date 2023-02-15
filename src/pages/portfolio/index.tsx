@@ -34,7 +34,7 @@ const PortfolioPage = () => {
                         transition={{ type: 'linear' }}
                     >
                         {category === CATEGORIES.CLIENT ? <div>
-                            {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt, tags, canonical, coverImage }) => (
+                            {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt,assetsURL,liveURL,githubURL,primaryURL,videoURL, tags, canonical, coverImage }) => (
                                 <PortfolioCard
                                     key={title}
                                     title={title}
@@ -44,11 +44,12 @@ const PortfolioPage = () => {
                                     canonical={canonical}
                                     portfolio
                                     coverImage={coverImage}
+                                    primaryURL={primaryURL}
                                 />
                             ))}
                         </div> :
                             <div>
-                                {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt, tags, canonical, coverImage }) => (
+                                {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt,assetsURL,liveURL,githubURL,primaryURL,videoURL, tags, canonical, coverImage }) => (
                                     <PortfolioCard
                                         key={title}
                                         title={title}
@@ -58,6 +59,11 @@ const PortfolioPage = () => {
                                         canonical={canonical}
                                         portfolio
                                         coverImage={coverImage}
+                                        assetsURL={assetsURL}
+                                    githubURL={githubURL}
+                                    liveURL={liveURL}
+                                    videoURL={videoURL}
+                                    primaryURL={primaryURL}
                                     />
                                 ))}
                             </div>}

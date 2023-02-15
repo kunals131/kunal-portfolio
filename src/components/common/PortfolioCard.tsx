@@ -1,6 +1,7 @@
 import moment from 'moment'
 import Image from 'next/image'
 import Link from './NoScrollLink'
+import PortfolioCardLinks from './PortfolioCardLinks'
 
 
 interface IProps {
@@ -11,6 +12,11 @@ interface IProps {
     canonical: string
     portfolio?: boolean
     coverImage?: string
+    assetsURL ?: string
+    liveURL ?:string
+    githubURL ?:string
+    videoURL ?:string
+    primaryURL ?:string
 }
 
 const PortfolioCard = ({
@@ -18,17 +24,20 @@ const PortfolioCard = ({
     description,
     date,
     tags,
-
     portfolio = false,
     coverImage = '',
+    githubURL,
+    liveURL,
+    assetsURL,
+    videoURL,
+    primaryURL
 }: IProps) => (
-    <div className="mb-14 flex flex-col sm:flex-row w-full">
-        <Link
-            href='/'
-            className={`w-full text-gray-500 dark:text-gray-300 ${coverImage ? 'sm:w-1/2 lg:w-1/2 xl:w-3/5' : 'sm:w-4/5'}`}
+    <div className="mb-16 group flex flex-col-reverse  sm w-full">
+        <div
+            className={`w-full text-gray-500 dark:text-gray-300 ${coverImage ? '' : 'sm:w-4/5'}`}
         >
             <>
-                <h3 className="text-2xl text-gray-600 dark:text-gray-100">{title}</h3>
+                <a target='_blank' rel="noreferrer" href={primaryURL || '/'} ><h3  className="text-2xl text-gray-600 cursor-pointer dark:text-gray-100 group-hover:underline">{title}</h3></a>
                 {!portfolio && (
                     <p className="text-sm my-1">
                         <span>{moment(date).format('Do MMMM YYYY')}</span>
@@ -37,15 +46,16 @@ const PortfolioCard = ({
                     </p>
                 )}
                 <p className="text-base mt-2">{description}</p>
-                <p className="text-base mt-2 underline hover:text-gray-800 dark:hover:text-gray-100 transition-colors">
+                {/* <p className="text-base mt-2 underline hover:text-gray-800 dark:hover:text-gray-100 transition-colors">
                     Read more
-                </p>
+                </p> */}
+                <PortfolioCardLinks assetsURL={assetsURL} githubURL={githubURL} liveURL={liveURL} videoURL={videoURL} />
             </>
 
-        </Link>
+        </div>
         {coverImage && (
-            <div className="w-full rounded-md h-auto sm:w-1/2 relative lg:w-1/2 xl:w-2/5 mt-4 sm:mt-0 sm:ml-4 flex items-center justify-center">
-                <Image src={coverImage} fill={true} className="w-full rounded-xl  object-contain " alt="" />
+            <div className=" rounded-md h-fit cursor-pointer mb-6 max-sm:mb-4  relative w-full mt-1 sm:mt-0 flex items-center justify-center">
+               <img src={coverImage} className='object-cover w-full h-fit rounded-lg'/>
             </div>
         )}
     </div>
