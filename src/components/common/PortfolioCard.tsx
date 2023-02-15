@@ -37,14 +37,12 @@ const PortfolioCard = ({
             className={`w-full text-gray-500 dark:text-gray-300 ${coverImage ? '' : 'sm:w-4/5'}`}
         >
             <>
-                <a target='_blank' rel="noreferrer" href={primaryURL || '/'} ><h3  className="text-2xl text-gray-600 cursor-pointer dark:text-gray-100 group-hover:underline">{title}</h3></a>
-                {!portfolio && (
-                    <p className="text-sm my-1">
+                <a target='_blank' rel="noreferrer" href={primaryURL || '/'} ><h3  className="text-2xl max-sm:text-xl text-gray-600 cursor-pointer dark:text-gray-100 group-hover:underline">{title}</h3></a>
+                    <p className="text-sm max-sm:hidden my-1 opacity-70">
                         <span>{moment(date).format('Do MMMM YYYY')}</span>
                         <span className="px-1">-</span>
-                        <span>{tags.join(', ')}</span>
+                        <span className='truncate'>{tags.join(', ')}</span>
                     </p>
-                )}
                 <p className="text-base mt-2">{description}</p>
                 {/* <p className="text-base mt-2 underline hover:text-gray-800 dark:hover:text-gray-100 transition-colors">
                     Read more
