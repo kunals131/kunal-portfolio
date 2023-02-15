@@ -20,3 +20,6 @@ export const SocialMediaLinks = {
     linkedin : 'https://www.linkedin.com/in/kunal-sangtiani-4373581bb/',
     email : 'ksangtiani13@gmail.com'
 }
+
+
+export const Resume_URL = 'https://drive.google.com/file/d/1FcKnCNcbJkfImeUgM9XfE-c7cjLcp2mz/view?usp=sharing'

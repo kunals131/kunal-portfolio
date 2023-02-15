@@ -1,4 +1,5 @@
 import { NavLinks } from '@/utils/data'
+import { Resume_URL } from '@/utils/data/PagesData';
 import { isActiveLink } from '@/utils/functions';
 import { dropMenuAnimation } from '@/utils/functions/dropMenuAnimation';
 import Link from 'next/link'
@@ -33,10 +34,13 @@ const PhoneNavigation = () => {
                         <Link href={link.href}>{link.label}</Link>
                     </div>
                 ))}
-                <div className='py-4 opacity-80 border-t mt-2 border-gray-400 flex items-center gap-2 px-5'>
-                    <p>Resume</p>
-                    <IoArrowForward />
-                </div>
+                
+                <a href={Resume_URL} target='_blank' rel="noreferrer">
+                    <div className='py-4 opacity-80 border-t mt-2 border-gray-400 flex items-center gap-2 px-5'>
+                        <p>Resume</p>
+                        <IoArrowForward />
+                    </div></a>
+
             </div>
         </>
     )
