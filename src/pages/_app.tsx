@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
             type: 'website',
             locale: 'en_IE',
             url,
-            description: 'Portfolio website of Kunal Sangtiani - Full Stack developer.',
+            description: 'Looking for a skilled full stack developer with expertise in the MERN stack? Look no further than my portfolio website! As a talented developer, I bring a wealth of experience and a passion for cutting-edge technologies to every project I undertake. From responsive front-end designs to robust back-end architectures, I have the skills and knowledge needed to help you achieve your development goals.',
             site_name: 'Kunal Sangtiani',
             images: [],
         }}

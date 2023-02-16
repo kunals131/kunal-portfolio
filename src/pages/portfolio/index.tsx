@@ -34,7 +34,7 @@ const PortfolioPage = () => {
                         transition={{ type: 'linear' }}
                     >
                         {category === CATEGORIES.CLIENT ? <div>
-                            {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt,assetsURL,liveURL,githubURL,primaryURL,videoURL, tags, canonical, coverImage }) => (
+                            {PortfolioData.filter(item => item.category === category).map(({ title, description, publishedAt,primaryURL, tags, canonical, coverImage }) => (
                                 <PortfolioCard
                                     key={title}
                                     title={title}
