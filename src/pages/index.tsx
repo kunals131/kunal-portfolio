@@ -9,7 +9,7 @@ import React from 'react'
 
 const Home: NextPage = () => {
   return (
-    <Layout title='Home' description={PagesData.HOME.title}>
+    <Layout title='Home' description={PagesData.HOME.subTitle}>
       <PageTitle title="Hey, I'm Kunal 👋" subtitle={PagesData.HOME.subTitle} icons />
       <Section linebreak>
         <h1 className='font-light text-4xl'>About</h1>
