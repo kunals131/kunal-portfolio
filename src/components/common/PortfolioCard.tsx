@@ -52,9 +52,11 @@ const PortfolioCard = ({
 
         </div>
         {coverImage && (
+            <a href={primaryURL || '/'} target='_blank' rel="noreferrer" className='w-full'>
             <div className=" rounded-md h-fit cursor-pointer mb-6 max-sm:mb-4  relative w-full mt-1 sm:mt-0 flex items-center justify-center">
                <img src={coverImage} className='object-cover w-full h-fit rounded-lg'/>
             </div>
+            </a>
         )}
     </div>
 )
