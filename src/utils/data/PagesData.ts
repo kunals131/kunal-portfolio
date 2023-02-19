@@ -22,4 +22,4 @@ export const SocialMediaLinks = {
 }
 
 
-export const Resume_URL = 'https://drive.google.com/file/d/1FcKnCNcbJkfImeUgM9XfE-c7cjLcp2mz/view?usp=sharing'
+export const Resume_URL = 'https://drive.google.com/file/d/1mH5S_QYzdOcU8RhLvgdiENTlurTombHj/view?usp=sharing'
