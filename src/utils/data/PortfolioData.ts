@@ -31,8 +31,8 @@ export const PortfolioData:IPortfolio[] = [
         tags : ['Next Js', 'Tailwind CSS', 'Typescript', 'Animation', 'Anime Js'],
         videoURL : '',
         category: CLIENT,
-        liveURL : 'https://www.verved.in/',
-        primaryURL : 'https://www.verved.in/',
+        liveURL : 'https://verved.vercel.app/',
+        primaryURL : 'https://verved.vercel.app/',
     },
     {
         title : 'Hoome.co.uk',
