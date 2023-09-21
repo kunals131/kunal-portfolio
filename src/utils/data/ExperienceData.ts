@@ -1,7 +1,32 @@
 export const ExperienceData = [
   {
+    title: 'Google Summer of Code Contributor',
+    company: 'Drupal Association',
+    duration: 'May 2023 ~ Sept 2023',
+    skills: 'Next.js, PHP, Symfony, Drupal',
+    description: [
+        'Developed a comprehensive learning management system with Drupal for GSoC students using Next.Js, PHP & Symfony.',
+        'This system will enable students to submit work, collaborate with mentors, manage deadlines, and share experiences.',
+        'Implemented text chat using web sockets.',
+    ],
+    id: '10',
+  },
+    {
+    title: 'SWE Intern (BA3)',
+    company: 'Barclays',
+    duration: 'May 2023 ~ July 2023',
+    skills: 'Java, JavaFX, Java Spring',
+    description: [
+        'Joined as BA3 Intern in Card Platform Back-end team, worked on developing automation utilities for endpoints sync between remote files and local development files using JavaFX.',
+        'Documented the entire project with all its specifications and working.',
+        'Wrote API configuration in Java Spring project for QA01 testing, and tested the application using Junits.',
+        'Participated in various Scrum ceremonies, including sprint planning, daily stand-ups, and sprint retrospectives.'
+    ],
+    id: '11',
+  },
+  {
     title: 'Full Stack Developer Intern',
-    company: 'Agrivision4u - MSME Funded',
+    company: 'Agrivision4u',
     duration: 'Jan 2023 ~ Current',
     skills: 'Next Js, Node Js, Express, Kubernetes, Docker',
     description: [
